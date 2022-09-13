@@ -26,12 +26,7 @@ foreach ($in as $key => $val) {
     }
 }
 
-uksort($out, function($a, $b) {
-    $r = '/^\d{1,2}/';
-    preg_match($r, $a, $m1);
-    preg_match($r, $b, $m2);
-    return $m1[0] <=> $m2[0];
-});
+ksort($out, SORT_NUMERIC);
 
 $expected = [
     '1st' => 'one',
