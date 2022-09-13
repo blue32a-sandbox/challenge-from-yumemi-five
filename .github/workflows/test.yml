@@ -16,5 +16,8 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
 
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Run answer
         run: php ./src/answer.php
